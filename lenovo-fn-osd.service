@@ -1,0 +1,13 @@
+[Unit]
+Description=Lenovo Fn-key OSD (Caps/Num/Fn lock + Fn+Q power profile popups)
+After=plasma-workspace.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/lenovo-fn-osd.py
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target
